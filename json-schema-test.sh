@@ -1,4 +1,3 @@
 #!/bin/bash
 
-#go build ./...
-./json-schema -s=./test/schema.json -d=./test/document.json
+./json-schema -s=file://./test/schema.json -d=file://./test/document.json

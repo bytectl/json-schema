@@ -1,0 +1,231 @@
+{
+    "profile": {
+        "productKey": "ZpOsqrr8"
+    },
+    "services": [{
+        "outputData": [],
+        "identifier": "set",
+        "inputData": [{
+            "identifier": "switch",
+            "dataType": {
+                "specs": {
+                    "0": "关",
+                    "1": "开"
+                },
+                "type": "enum"
+            },
+            "name": "开关"
+        }, {
+
+            "identifier": "countDown",
+            "dataType": {
+                "specs": {
+                    "unit": "s",
+                    "min": "0",
+                    "unitName": "分",
+                    "max": "1440"
+                },
+                "type": "int32"
+            },
+            "name": "倒计时"
+        }, {
+
+            "identifier": "order",
+            "dataType": {
+                "specs": {
+                    "length": "256"
+                },
+                "type": "text"
+            },
+            "name": "定时"
+        }, {
+
+            "identifier": "networkStatus",
+            "dataType": {
+                "specs": {
+                    "0": "正常",
+                    "1": "设备不在指定的运营商网络",
+                    "2": "设备被禁用",
+                    "3": "其他错误"
+                },
+                "type": "enum"
+            },
+            "name": "入网状态"
+        }],
+        "method": "thing.service.property.set",
+        "name": "set",
+        "callType": "sync",
+        "required": true,
+        "desc": "属性设置"
+    }, {
+
+        "outputData": [{
+            "identifier": "switch",
+            "dataType": {
+                "specs": {
+                    "0": "关",
+                    "1": "开"
+                },
+                "type": "enum"
+            },
+            "name": "开关"
+        }, {
+
+            "identifier": "countDown",
+            "dataType": {
+                "specs": {
+                    "unit": "′",
+                    "min": "0",
+                    "unitName": "分",
+                    "max": "1440"
+                },
+                "type": "int32"
+            },
+            "name": "倒计时"
+        }, {
+
+            "identifier": "order",
+            "dataType": {
+                "specs": {
+                    "length": "256"
+                },
+                "type": "text"
+            },
+            "name": "定时"
+        }, {
+
+            "identifier": "networkStatus",
+            "dataType": {
+                "specs": {
+                    "0": "正常",
+                    "1": "设备不在指定的运营商网络",
+                    "2": "设备被禁用",
+                    "3": "其他错误"
+                },
+                "type": "enum"
+            },
+            "name": "入网状态"
+        }],
+        "identifier": "get",
+        "inputData": ["switch", "countDown", "order", "networkStatus"],
+        "method": "thing.service.property.get",
+        "name": "get",
+        "callType": "sync",
+        "required": true,
+        "desc": "属性获取"
+    }],
+    "properties": [{
+        "identifier": "switch",
+        "dataType": {
+            "specs": {
+                "0": "关",
+                "1": "开"
+            },
+            "type": "enum"
+        },
+        "name": "开关",
+        "accessMode": "rw",
+        "required": false,
+        "desc": ""
+    }, {
+
+        "identifier": "countDown",
+        "dataType": {
+            "specs": {
+                "unit": "′",
+                "min": "0",
+                "unitName": "分",
+                "max": "1440"
+            },
+            "type": "int32"
+        },
+        "name": "倒计时",
+        "accessMode": "rw",
+        "required": false,
+        "desc": ""
+    }, {
+
+        "identifier": "order",
+        "dataType": {
+            "specs": {
+                "length": "256"
+            },
+            "type": "text"
+        },
+        "name": "定时",
+        "accessMode": "rw",
+        "required": false,
+        "desc": ""
+    }, {
+
+        "identifier": "networkStatus",
+        "dataType": {
+            "specs": {
+                "0": "正常",
+                "1": "设备不在指定的运营商网络",
+                "2": "设备被禁用",
+                "3": "其他错误"
+            },
+            "type": "enum"
+        },
+        "name": "入网状态",
+        "accessMode": "rw",
+        "required": false,
+        "desc": ""
+    }],
+    "events": [{
+        "outputData": [{
+            "identifier": "switch",
+            "dataType": {
+                "specs": {
+                    "0": "关",
+                    "1": "开"
+                },
+                "type": "enum"
+            },
+            "name": "开关"
+        }, {
+
+            "identifier": "countDown",
+            "dataType": {
+                "specs": {
+                    "unit": "′",
+                    "min": "0",
+                    "unitName": "分",
+                    "max": "1440"
+                },
+                "type": "int32"
+            },
+            "name": "倒计时"
+        }, {
+
+            "identifier": "order",
+            "dataType": {
+                "specs": {
+                    "length": "256"
+                },
+                "type": "text"
+            },
+            "name": "定时"
+        }, {
+
+            "identifier": "networkStatus",
+            "dataType": {
+                "specs": {
+                    "0": "正常",
+                    "1": "设备不在指定的运营商网络",
+                    "2": "设备被禁用",
+                    "3": "其他错误"
+                },
+                "type": "enum"
+            },
+            "name": "入网状态"
+        }],
+        "identifier": "post",
+        "method": "thing.event.property.post",
+        "name": "post",
+        "type": "info",
+        "required": true,
+        "desc": "属性上报"
+    }]
+}
